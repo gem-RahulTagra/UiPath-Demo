@@ -1,0 +1,364 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GemuGrid" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="TestData" Type="InOutArgument(ggm:TestData)" />
+    <x:Property Name="Globalconf" Type="InOutArgument(ggm:GlobalConfig)" />
+    <x:Property Name="SelectorMap" Type="InOutArgument(ggm:SelectorMap)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1524,4524</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>GemuGrid_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="76">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GemEcosystem.GemSURF.Models</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>GemEcosystem.GemSURF.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>GemEcosystem.GemSURF.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="102">
+      <AssemblyReference>GemEcosystem.GemSURF</AssemblyReference>
+      <AssemblyReference>GemEcosystem.GemSURF.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GemuGrid" sap:VirtualizedContainerService.HintSize="1280,4459" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="1218,133" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="GemUGrid" TestData="[TestData]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1218,4050" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="d8761611-377d-4637-9af9-2fce321f6317" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1184,3883" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Default="Nil" Name="Content" />
+              <Variable x:TypeArguments="x:String" Name="Flag" />
+              <Variable x:TypeArguments="x:String" Name="Result" />
+              <Variable x:TypeArguments="x:String" Name="heading" />
+              <Variable x:TypeArguments="x:String" Name="subPara" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="1122,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">false</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NClick ClickType="Single" DisplayName="Click 'GemU'" sap:VirtualizedContainerService.HintSize="1122,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d8761611-377d-4637-9af9-2fce321f6317" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://dev.geminisolutions.com/" DesignTimeRectangle="1205, 184, 44, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'GemU'" FullSelectorArgument="&lt;webctrl aaname='GemU' class='menu-list' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='GemU' class='menu-list' tag='SPAN' type='' check:innerText='GemU' /&gt;" Guid="5b2c19f3-8448-45a2-b13e-662d9af2f736" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAcCAYAAAAnbDzKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK9SURBVFhH7ZXBaxpBFMb3z/DqZaE3cwqepIIgUggYKNiLhKbgofQQyUFy8BBP4iGE9hAiBAIKhRWKEkoCHgIiPSxehICFaA4RL6JIkFUQvr7ZHc24rmmjFhH2BwM7b9/Oe9/Mm7cSNhxbwLqxBawbW8C6mStAe6yhWFL1Ub5vQxvxF/+T0RDdzpBPZtF6T+gO+IQzK6BXxdc9HyTZDac/DG8wBCc9S9sxpH/PX3wlqKcU9xRlPp2mjcy+G0GlzecG0wJGNaT8bjhCZyi2uI0xaOLqOATJdYCcaF81ywroFmKUZBxXHW4QGTWQfk/iklVu4AzoWDs0eqbTEcuhb/iIZaiXg8m2pIA2chGLBEVYIpNEh6icfzbKiw/nXhaVPn/Nk8n8iD37UBnmHug0Y3Saou1x+psFBVSRoAXNDvPo/ozDQSWVeeCGXg3piAeOYxUam+vJuOFOquiyXR7RBh3Se5cPH743mQfZmkhTUlK8LHyzYgGVc3aRxUG7zBfzXja4F6d6gS2ZSrBHz3oyJFC8M79mE2wpB5D289DdlhNAF/gtOYx3h1O/OUPqxBhHkV0ewBBrdClh7LyDY5y0lQCLBFcoYIhinI7zyzW63GKmfhnmwQwB0Zu2cYFNQ7+Yywiw/OdQEwm+KIA6Ay2wJYeQUC36fZ+SphYbyLITMi6898JUQv0myqUaWuxns4iAVh5B2YPorUX8ewUBeRcpU4+ZEsBOoZxk/T6MqEKJ8B1tVfOI7ngg+Sk47zLabYou5CckSk1jxzs1ZKi7OCLXwm6+UgDrbCdG/KNCYxK/rmbxcZs65HhtAZMAxhB3SgoB+mDS6mQfAocKKuxyCtQLop8Hbw4U3E210dcKIEZPqGTj8Lqm4we/qWhZlJaFgGcsfzYWaP/gswhs3b/Ff1HAJmALWDe2gHVjC1g3Gy4A+AMf/pulCAElqwAAAABJRU5ErkJggg==" InformativeScreenshot="cac9c20979b8ec9ecfacf592f3848232.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'About GemU'" sap:VirtualizedContainerService.HintSize="1122,157" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d8761611-377d-4637-9af9-2fce321f6317" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://dev.geminisolutions.com/" DesignTimeRectangle="758, 295, 228, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'About GemU'" FullSelectorArgument="&lt;webctrl parentid='nav-menu-fixed' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nav-menu-fixed' tag='SPAN' type='' class='option_head' aaname='About GemU' check:innerText='About GemU' /&gt;" Guid="4090184f-a8e9-440f-b179-a61d9f7af43b" ImageBase64="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" InformativeScreenshot="f7df98118d35d2670105ff98ff7283f1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="1122,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1122,1161" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[TestData(0)(0).ToArray]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="njl:JToken">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentJToken" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1088,975" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="DataEngineeringOption" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="1046,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[DataEngineeringOption]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[SelectorMap("ContactUsLocations").ToString.Replace("{value}",currentJToken.ToString)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1046,765" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="5" Version="V3">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,548" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">true</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[currentJToken.ToString + &quot;is present&quot;]" />
+                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_3" ScreenShot="Yes" TestStep="[&quot;Verify if  &quot;+currentJToken.ToString+&quot; element is present on screen&quot;]" TestStepDesciption="[currentJToken.ToString+&quot; is present&quot;]" TestStepStatus="PASS" />
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,483" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_8">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">false</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_4" ScreenShot="Yes" TestStep="[&quot;Verify if  &quot;+currentJToken.ToString+&quot; element is present on screen&quot;]" TestStepDesciption="[currentJToken.ToString+&quot; is not present&quot;]" TestStepStatus="FAIL" />
+                          <ui:Break sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Break_1" />
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[DataEngineeringOption]" Guid="444e9bad-92c1-45c2-b743-65d5d0364fe6" SearchSteps="Selector" />
+                      </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1122,1161" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[TestData(0)(1).ToArray]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="njl:JToken">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentJToken" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1088,975" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="DataEngineeringOption" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="1046,82" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[DataEngineeringOption]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[SelectorMap("ContactUsLocations").ToString.Replace("{value}",currentJToken.ToString)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1046,765" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="5" Version="V3">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,548" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">true</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[currentJToken.ToString + &quot;is present&quot;]" />
+                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_5" ScreenShot="Yes" TestStep="[&quot;Verify if  &quot;+currentJToken.ToString+&quot; element is present on screen&quot;]" TestStepDesciption="[currentJToken.ToString+&quot; is present&quot;]" TestStepStatus="PASS" />
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,483" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_11">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">false</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogStatus_6" ScreenShot="Yes" TestStep="[&quot;Verify if  &quot;+currentJToken.ToString+&quot; element is present on screen&quot;]" TestStepDesciption="[currentJToken.ToString+&quot; is not present&quot;]" TestStepStatus="FAIL" />
+                          <ui:Break sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Break_2" />
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[DataEngineeringOption]" Guid="444e9bad-92c1-45c2-b743-65d5d0364fe6" SearchSteps="Selector" />
+                      </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <If Condition="[Flag=&quot;true&quot;]" sap:VirtualizedContainerService.HintSize="1122,720" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,269" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="Verify GemUGrid options are navigation links" TestStepDesciption="All options are present and navigable" TestStepStatus="PASS" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,269" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="LogStatus_2" ScreenShot="Yes" TestStep="Verify GemUGrid options are navigation links" TestStepDesciption="Not all options are present and navigable" TestStepStatus="FAIL" />
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" Selector="[SelectorMap(&quot;site&quot;).ToString]" Url="https://dev.geminisolutions.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <gga:StopTest ContinueOnError="False" DisplayName="Stop Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="1218,85" sap2010:WorkflowViewState.IdRef="StopTest_1" />
+  </Sequence>
+</Activity>

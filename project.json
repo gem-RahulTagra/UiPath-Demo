@@ -1,0 +1,72 @@
+{
+  "name": "GEMSURF-Testing",
+  "projectId": "f0d18cb3-d279-4695-94ea-cf06e235ecad",
+  "description": "Blank Process",
+  "main": "AppRunner.xaml",
+  "dependencies": {
+    "GemEcosystem.GemSURF.Activities": "[0.1.0.912074607]",
+    "UiPath.DocumentUnderstanding.Activities": "[2.2.5]",
+    "UiPath.Excel.Activities": "[2.20.3]",
+    "UiPath.Mail.Activities": "[1.20.3]",
+    "UiPath.PDF.Activities": "[3.14.1]",
+    "UiPath.System.Activities": "[23.4.4]",
+    "UiPath.Terminal.Activities": "[2.7.0]",
+    "UiPath.Testing.Activities": "[23.4.1]",
+    "UiPath.UIAutomation.Activities": "[23.4.8]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.10.3.0",
+  "projectVersion": "1.0.5",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Operation.xaml",
+      "uniqueId": "1a8f241f-5b59-4057-9675-c59033b623f1",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "AppRunner.xaml",
+      "uniqueId": "19bb8bb2-fcc2-4902-b9b7-ef223430235e",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

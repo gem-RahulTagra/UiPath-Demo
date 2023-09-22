@@ -1,0 +1,19 @@
+﻿
+{  "ProjectEnv": "beta",
+	"ProjectName": "UIPATHFRAMEWORK",
+	"Environ": {  
+		"beta": {   
+			"SelectorFile": [ "Selector.json" ],  
+			"TestDataFile": [ "TestData.json" ], 
+			"TestCaseFile": [ "TestList.json"], 
+			"ReportType": "GEMSURF-DEMO",     
+			"OutputPath": ".//",
+			"jewelUsername" : "rahul.tagra",
+			"jewelBridgeToken": "96b2c05a-b587-46a6-823c-f1dee20acecc1684133129535",
+			"emailReportFlag":"Y",
+			"emailTo":"rahul.tagra@geminisolutions.com,abhishek.sharma@geminisolutions.com"
+		}   
+}
+}
+
+
