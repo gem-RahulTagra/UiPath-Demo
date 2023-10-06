@@ -6,7 +6,7 @@
 			"SelectorFile": [ "Selector.json" ],  
 			"TestDataFile": [ "TestData.json" ], 
 			"TestCaseFile": [ "TestList.json"], 
-			"ReportType": "GEMSURF-DEMO",     
+			"ReportType": "UIPATH-DEMO",     
 			"OutputPath": ".//",
 			"jewelUsername" : "rahul.tagra",
 			"jewelBridgeToken": "96b2c05a-b587-46a6-823c-f1dee20acecc1684133129535",
