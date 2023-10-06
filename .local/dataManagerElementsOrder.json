@@ -541,15 +541,16 @@
       "Path": "PDF_Comparison_CopyPaste.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "variableName&Sequence_25",
+        "pdfEle2&Sequence_1",
+        "pdfEle1&Sequence_1",
         "folderPath&Sequence_1",
         "fileName&Sequence_1",
         "pdf1&Sequence_1",
         "pdf2&Sequence_1",
         "stringList&Sequence_1",
         "stringList2&Sequence_1",
-        "flag&Sequence_1",
-        "variableName&Sequence_13",
-        "variableName&Sequence_17"
+        "flag&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "Globalconf",
@@ -563,6 +564,9 @@
       "Path": "PDF_Comparison.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Globalconf&Sequence_1",
+        "SelectorMap&Sequence_1",
+        "TestData&Sequence_1",
         "pdf1&Sequence_1",
         "pdf2&Sequence_1",
         "stringList&Sequence_1",
@@ -572,6 +576,24 @@
         "num&Sequence_1",
         "stringList2&Sequence_1",
         "testStr&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "PDF.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "folderPath&Sequence_2",
+        "fileName&Sequence_2",
+        "pdf1&Sequence_2",
+        "pdf2&Sequence_2",
+        "stringList&Sequence_2",
+        "stringList2&Sequence_2",
+        "flag&Sequence_2",
+        "pdfEle1&Sequence_2",
+        "pdfEle2&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
         "Globalconf",

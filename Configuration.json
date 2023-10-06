@@ -1,17 +1,18 @@
 ﻿
 {  "ProjectEnv": "beta",
-	"ProjectName": "UIPATHFRAMEWORK",
+	"ProjectName": "UIPATH DEMO",
 	"Environ": {  
 		"beta": {   
 			"SelectorFile": [ "Selector.json" ],  
 			"TestDataFile": [ "TestData.json" ], 
 			"TestCaseFile": [ "TestList.json"], 
-			"ReportType": "GEMSURF-DEMO",     
+			"ReportType": "UIPATH DEMO-PDF COMPARISON CopyPaste",     
 			"OutputPath": ".//",
-			"jewelUsername" : "rahul.tagra",
-			"jewelBridgeToken": "96b2c05a-b587-46a6-823c-f1dee20acecc1684133129535",
+			
+			"jewelBridgeToken": "41603823-042a-488f-b9da-2ebaf895df051692618756555",
 			"emailReportFlag":"Y",
-			"emailTo":"rahul.tagra@geminisolutions.com,abhishek.sharma@geminisolutions.com"
+			"emailTo":"rahul.tagra@geminisolutions.com,abhishek.sharma@geminisolutions.com",
+			"emailCC":"richa.khatri@geminisolutions.com"
 		}   
 }
 }

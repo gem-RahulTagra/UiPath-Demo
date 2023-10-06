@@ -1,6 +1,6 @@
 using UiPath.CodedWorkflows;
 
-namespace GEMSURFTesting
+namespace UIPATHDEMOPDFCOMPARISONCopyPaste
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {

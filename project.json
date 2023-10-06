@@ -1,8 +1,8 @@
 {
-  "name": "GEMSURF-Testing",
+  "name": "UIPATH DEMO-PDF COMPARISON CopyPaste",
   "projectId": "f0d18cb3-d279-4695-94ea-cf06e235ecad",
   "description": "Blank Process",
-  "main": "AppRunner.xaml",
+  "main": "PDF_Comparison_CopyPaste.xaml",
   "dependencies": {
     "GemEcosystem.GemSURF.Activities": "[0.1.0.912074607]",
     "UiPath.DocumentUnderstanding.Activities": "[2.2.5]",
@@ -61,6 +61,24 @@
     {
       "filePath": "AppRunner.xaml",
       "uniqueId": "19bb8bb2-fcc2-4902-b9b7-ef223430235e",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Paint.xaml",
+      "uniqueId": "99e7f812-0557-4d0c-b9fa-e092210ea227",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "PDF_Comparison.xaml",
+      "uniqueId": "9fc2ab42-7582-4a11-b830-1155c0b19cfe",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "PDF_Comparison_CopyPaste.xaml",
+      "uniqueId": "b92d298e-d6ce-47cc-8203-47762ac02df1",
       "input": [],
       "output": []
     }
